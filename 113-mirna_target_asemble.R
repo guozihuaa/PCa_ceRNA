@@ -4,36 +4,7 @@ library(tidyverse)
 library(readxl)
 setwd("F:/WORK/Lab Work/indivial/GUOZIHU/")
 
-mirwalk5utr <- read_tsv(file = "hsa_miRWalk_5UTR/hsa_miRWalk_5UTR.txt" )
-
-mirwalk5utr2 <- dplyr::select(mirwalk5utr, miRNA, Genesymbol) %>% 
-                distinct()
-
-rm(mirwalk5utr)
-gc()
-
-mirwalkcds <- read_tsv(file = "hsa_miRWalk_CDS/hsa_miRWalk_CDS.txt")
-
-mirwalkcds2 <- dplyr::select(mirwalkcds, miRNA, Genesymbol) %>% 
-  distinct()
-
-rm(mirwalkcds)
-gc()
-
-
-mir3utr <- read_tsv(file = "hsa_miRWalk_3UTR/hsa_miRWalk_3UTR.txt")
-
-mirwalk3utr2 <- dplyr::select(mir3utr, miRNA, Genesymbol) %>% 
-  distinct()
-
-rm(mir3utr)
-gc()
-
-
-mirna_mran <- bind_rows(mirwalk3utr2, mirwalk5utr2, mirwalkcds2) %>% 
-              distinct()
-
-save(mirna_mran, file = "2/rawdata/miRNA_mRNA_inte.RData")
+load(mirna_mran, file = "2/rawdata/miRNA_mRNA_inte.RData")
 
 
 ############## lncbase
