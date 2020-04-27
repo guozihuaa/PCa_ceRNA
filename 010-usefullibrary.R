@@ -1,0 +1,6 @@
+library(ggplot2)
+library(TCGAbiolinks)
+library(GDCRNATools)
+library(GEOquery)
+library(tidyverse)
+library(annotables)
