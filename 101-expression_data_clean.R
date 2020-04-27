@@ -1,29 +1,3 @@
-####### 找到合适的miRNA 数据集
-dbDEMC <- read_csv("rawdata/miRExpAll.csv", col_names = F) %>% 
-  group_split(X3)
-
-
-names(dbDEMC) <- sapply(dbDEMC, function(x){x$X4[1]})
-
-mirnas <- lapply(dbDEMC, function(x){x$X2})[c("GSE76260",  "GSE21036","GSE31568",	"TCGA_PRAD"	)]
-
-
-
-result <- sapply(mirnas, function(x) sapply(mirnas, function(y) length(intersect(x,y))))
-
-
-############ GEO mRNA 表达数据处理
-
-
-
-########## TCGA 前列腺癌
-##### 临床数据
-
-#clincila data
-clinical <- read_csv("rawdata/clinical_information.csv")
-
-filterclinical <- clinical
-
 ############
 
 
