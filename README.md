@@ -5,7 +5,7 @@ Long noncoding RNA (lncRNA)-mediated competitive endogenous RNA (ceRNA) networks
 1.0.1
 
 ## Date 
-2020.04.10
+2019.10.10
 
 ## Title
 Systematic evaluation of the diagnostic and prognostic significance of competitive endogenous RNA networks in prostate cancer
